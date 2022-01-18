@@ -33,6 +33,11 @@
   }
 }
 
+/* general styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-light);
   color: var(--color-dark);
@@ -53,6 +58,11 @@ img {
 
 strong {
   font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* typography */
@@ -115,8 +125,108 @@ h3 {
 }
 
 /* navigation */
-nav {
-  display: none;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.nav {
+  position: fixed;
+  background: var(--color-dark);
+  color: var(--color-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 9999;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--color-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
 }
 
 /* intro section */
@@ -259,4 +369,52 @@ nav {
 .portfolio-item:focus .portfolio-img {
   transform: scale(1.2);
   opacity: 0.75;
+}
+
+/* contacts - footer */
+.footer {
+  font-size: var(--fs-h3);
+  background-color: #111;
+  color: var(--color-accent);
+  text-align: center;
+  padding: 1em 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-link {
+  font-weight: var(--fw-bold);
+  display: block;
+  width: fit-content;
+  margin-top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-link:hover,
+.social-list-link:hover {
+  opacity: 0.7;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 0;
+  padding: 0;
+}
+
+.social-list-item {
+  margin: 0 0.5em;
+}
+
+.social-list-link {
+  padding: 0.5em;
 }
