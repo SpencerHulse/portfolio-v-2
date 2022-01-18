@@ -24,15 +24,6 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 800px) {
-  :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 1.5rem;
-    --fs-body: 1.125rem;
-  }
-}
-
 /* general styles */
 html {
   scroll-behavior: smooth;
@@ -239,42 +230,6 @@ header {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 600px) {
-  .intro {
-    display: grid;
-    width: min-content;
-    margin: 0 auto;
-    grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
-  }
-
-  .section-title-intro {
-    margin-left: 0.25em;
-  }
-
-  .section-subtitle-intro {
-    margin: 0;
-    max-width: none;
-    align-self: start;
-    grid-column: -1 / 1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);
-  }
-
-  .intro-img {
-    grid-area: img;
-    min-width: 250px;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-  }
-}
-
 /* hero */
 .hero {
   padding-bottom: 3em;
@@ -301,46 +256,6 @@ header {
 
 .about-me-img-large {
   display: none;
-}
-
-@media (min-width: 600px) {
-  .about-me {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-areas:
-      "title img"
-      "subtitle img"
-      "text img";
-    grid-column-gap: 2em;
-  }
-
-  .section-title-about {
-    grid-area: title;
-  }
-
-  .section-subtitle-about {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    position: relative;
-    left: -1em;
-    width: calc(100% + 2em);
-    padding-left: 1em;
-    padding-right: calc(200px + 2em);
-  }
-
-  .about-me-img {
-    grid-area: img;
-    position: relative;
-    z-index: 2;
-  }
-
-  .about-me-img-small {
-    display: none;
-  }
-
-  .about-me-img-large {
-    display: block;
-  }
 }
 
 /* my work */
@@ -417,4 +332,93 @@ header {
 
 .social-list-link {
   padding: 0.5em;
+}
+
+/* media queries */
+/* font variables media query */
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* intro media query */
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .section-title-intro {
+    margin-left: 0.25em;
+  }
+
+  .section-subtitle-intro {
+    margin: 0;
+    max-width: none;
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+
+  .intro-img {
+    grid-area: img;
+    min-width: 250px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* about me media query */
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section-title-about {
+    grid-area: title;
+  }
+
+  .section-subtitle-about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 2em);
+  }
+
+  .about-me-img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-me-img-small {
+    display: none;
+  }
+
+  .about-me-img-large {
+    display: block;
+  }
 }
