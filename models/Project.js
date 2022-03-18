@@ -43,6 +43,7 @@ Project.init(
     freezeTableName: true,
     underscored: true,
     modelName: "project",
+    timestamps: false,
   }
 );
 
