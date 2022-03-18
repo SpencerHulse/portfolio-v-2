@@ -10,14 +10,30 @@ const hbs = exphbs.create({});
 app.set("view engine", "handlebars");
 app.engine("handlebars", hbs.engine);
 
+// Sequelize and Session Cookies
+const sequelize = require("./config/connection");
+const session = require("express-session");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({ db: sequelize }),
+};
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
+// Session
+app.use(session(sess));
 
 // Routes
 app.use(require("./controllers"));
 
-// Port
+// Database and Server
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`listening on port ${PORT}...`));
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
+});
