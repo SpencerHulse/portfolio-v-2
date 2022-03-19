@@ -1,0 +1,23 @@
+<h1>{{project.project_title}}/<span>{{project.project_focus}}</span></h1>
+
+<div>
+  <div>
+    <p>{{project.project_description}}</p>
+    <p>Technologies Used: {{project.technologies_used}}</p>
+  </div>
+
+  <div>
+    <img
+      src="/images/{{project.screenshot_filename}}"
+      alt="screenshot of the {{project.project_title}} project"
+    />
+  </div>
+</div>
+
+<div>
+  <p>Want to take a closer look at things?</p>
+  <p><a href="{{project.github_repo}}" target="_blank">Check out the GitHub
+      Repo!</a></p>
+  <p><a href="{{project.deployed_link}}" target="_blank">Explore a deployed
+      version of the app!</a></p>
+</div>

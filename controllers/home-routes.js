@@ -15,7 +15,16 @@ router.get("/", (req, res) => {
 });
 
 router.get("/project/:id", (req, res) => {
-  res.render("project-page", {});
+  Project.findOne({ where: { id: req.params.id } })
+    .then((data) => {
+      const project = data.get({ plain: true });
+
+      res.render("project-page", { project });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

@@ -11,6 +11,10 @@ Project.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    project_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     project_title: {
       type: DataTypes.STRING,
       allowNull: false,

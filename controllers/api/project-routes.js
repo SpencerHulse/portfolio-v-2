@@ -26,6 +26,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Project.create({
+    project_type: req.body.project_type,
     project_title: req.body.project_title,
     project_description: req.body.project_description,
     technologies_used: req.body.technologies_used,
