@@ -2,48 +2,23 @@
 
 ## Description
 
-This is a second attempt at create a portfolio to use in a professional setting. It includes a header with a logo and "hamburger" that opens the internal links. It also has a link to download my resume for potential employers.
+This is my current portfolio, which has been updated to a full-stack website that utilizes CRUD api routes and mysql2 and sequelize. Those combine with handlebars.js to give me a dynamic site that automatically updates when I add or remove projects from the database.
 
-The next section is an introduction, including my name a job title. It is followed by a hero section and the about me section, which gives people a small introduction to who I am.
+The homepage gives information about me, and it shows images of each of my projects. There are also some brief introductions when you hover over the images, such as the type of project and main technologies used. If you click a project, you are taken to a single-project page that gives a few more details of the project, along with links to the deployed version and the GitHub repo.
 
-Finally, there is a section that includes links to my work, which will be updated periodically. There are also various forms of contact in the footer.
+Each page has a header and footer. The header includes links to the different sections of the homepage. The footer contains contact information and links to my social media and GitHub.
 
-The website utilizes HTML, CSS, minimal JS, and some fonts and icons pulled from various sources.
+![alt text](./public/images/screenshot.png)
 
-![alt text](./assets/images/screenshot.png)
-
-The deployed site can be found at:
-https://spencerhulse.github.io/portfolio-v-2/
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-  <a name="installation"></a>
-
-## Installation
-
-Open it up and have a look!
-<a name="usage"></a>
+The deployed site can be found on [Heroku](https://enigmatic-basin-48114.herokuapp.com/)
 
 ## Usage
 
 There is a menu for easy navigation, and each project links to more information about it. Feel free to explore.
 
-<a name="contributing"></a>
-
 ## Contributing
 
 No contributions at this time, please.
-<a name="tests"></a>
-
-## Tests
-
-None. Though, it is a work in progess - always.
-<a name="questions"></a>
 
 ## Questions
 
