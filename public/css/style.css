@@ -411,6 +411,81 @@ header {
   padding: 0.5em;
 }
 
+/* single-page styles */
+.single-page-title-container {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.single-page-title-div {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-page-title {
+  text-align: center;
+  width: 619px;
+  margin-bottom: 10px;
+}
+
+.project-focus {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--bs);
+  min-width: 160px;
+  max-height: 52px;
+  background-color: var(--color-accent);
+}
+
+.single-page-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.single-page-info-div {
+  max-width: 310px;
+  margin: 0 40px;
+}
+
+.single-page-img {
+  width: 300px;
+  margin: 20px 40px;
+}
+
+.single-page-links-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-links-header {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: #02aeb1;
+}
+
+.project-link {
+  text-align: center;
+}
+
+.project-link a {
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  color: var(--color-dark);
+}
+
+.project-link :hover {
+  text-decoration: underline;
+}
+
 /* media queries */
 /* font variables media query */
 @media (min-width: 800px) {
@@ -497,5 +572,43 @@ header {
 
   .about-me-img-large {
     display: block;
+  }
+}
+
+/* single-page media query */
+@media (min-width: 600px) {
+  .single-page-info-div {
+    max-width: 410px;
+  }
+
+  .single-page-img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 800px) {
+  .single-page-title-container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .project-focus {
+    vertical-align: top;
+  }
+
+  .single-page-title {
+    min-width: none;
+  }
+
+  .single-page-info-container {
+    justify-content: center;
+  }
+
+  .single-page-info-div {
+    max-width: 510px;
+  }
+
+  .single-page-img {
+    width: 500px;
   }
 }

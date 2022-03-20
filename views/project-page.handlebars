@@ -1,23 +1,37 @@
-<h1>{{project.project_title}}/<span>{{project.project_focus}}</span></h1>
+<div class="single-page-title-container">
+  <div class="single-page-title-div">
+    <h1 class="single-page-title">
+      {{project.project_title}}
+    </h1>
+    <span class="project-focus">{{project.project_focus}} focus</span>
+  </div>
+</div>
 
-<div>
-  <div>
+<div class="single-page-info-container">
+  <div class="single-page-info-div">
     <p>{{project.project_description}}</p>
     <p>Technologies Used: {{project.technologies_used}}</p>
   </div>
 
-  <div>
+  <div class="single-page-img-div">
     <img
       src="/images/{{project.screenshot_filename}}"
       alt="screenshot of the {{project.project_title}} project"
+      class="single-page-img"
     />
   </div>
 </div>
 
-<div>
-  <p>Want to take a closer look at things?</p>
-  <p><a href="{{project.github_repo}}" target="_blank">Check out the GitHub
-      Repo!</a></p>
-  <p><a href="{{project.deployed_link}}" target="_blank">Explore a deployed
-      version of the app!</a></p>
+<div class="single-page-links-container">
+  <div class="project-links-div">
+    <p class="project-links-header">Want to take a closer look at things?</p>
+    <p class="project-link"><a
+        href="{{project.github_repo}}"
+        target="_blank"
+      >Check out the GitHub Repo!</a></p>
+    <p class="project-link"><a
+        href="{{project.deployed_link}}"
+        target="_blank"
+      >Explore a deployed version of the app!</a></p>
+  </div>
 </div>
