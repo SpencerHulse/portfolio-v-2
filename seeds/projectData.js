@@ -2,6 +2,17 @@ const Project = require("../models");
 
 const projectData = [
   {
+    project_type: "Property Listings",
+    project_title: "Tenantive.ly",
+    project_description:
+      "Tenantive.ly is a property-listing website that makes it easy for landlords to get their properties out there. It allows landlords to create an account and list, edit, and remove properties. Potential tenants can then view the listings posted on the site, which contain information about the property and contact details for the landlord.",
+    technologies_used: "Node / AWS s3 Bucket / Sequelize",
+    screenshot_filename: "tenantively.png",
+    project_focus: "full-stack",
+    github_repo: "https://github.com/SpencerHulse/tenantively-maybe-probably",
+    deployed_link: "https://glacial-temple-16968.herokuapp.com/",
+  },
+  {
     project_type: "Job Aggregator",
     project_title: "newJobs(you)",
     project_description:
